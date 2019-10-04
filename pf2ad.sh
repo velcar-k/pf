@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION='20180302001' # Welcome to Brasil
+VERSION='20180302009' # Welcome to Brasil
 
 if [ -f "/etc/samba.patch.version" ]; then
 	if [ "$(cat /etc/samba.patch.version)" = "$VERSION" ]; then
