@@ -91,8 +91,8 @@ if [ ! "$(/usr/sbin/pkg info | grep pfSense-pkg-squid)" ]; then
 	/usr/sbin/pkg install -r pfSense pfSense-pkg-squid
 fi
 cd /usr/local/pkg
-fetch -o - -q https://github.com/Carlosanalista/pf2ad-2.4.4/squid_winbind_auth.patch | patch -b -p0 -f
-fetch -o /usr/local/pkg -q https://github.com/Carlosanalista/pf2ad-2.4.4/squid.inc
+fetch -o - -q https://raw.githubusercontent.com/velcar-k/pf/master/squid_winbind_auth.patch | patch -b -p0 -f
+fetch -o /usr/local/pkg -q https://raw.githubusercontent.com/velcar-k/pf/master/squid.inc
 
 if [ ! -f "/usr/local/etc/smb4.conf" ]; then
 	touch /usr/local/etc/smb4.conf
